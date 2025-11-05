@@ -55,6 +55,11 @@ A stunning, interactive portfolio website built with cutting-edge web technologi
 
 1. Clone the repository:
 ```bash
+# From GitHub (recommended)
+git clone git@github.com:babaoflamp/company_website.git
+cd company_website
+
+# Or from GitLab
 git clone git@gitlab.com:babaoflamp/company_website.git
 cd company_website
 ```
@@ -148,6 +153,32 @@ npm run test:report
 ### Playwright MCP Setup
 
 For advanced browser automation with Claude, see [Playwright MCP Setup Guide](./.claude/playwright-mcp-setup.md).
+
+## Git Workflow
+
+This project uses **dual remotes** (GitHub and GitLab) for redundancy.
+
+### Current Remotes
+- **github**: `git@github.com:babaoflamp/company_website.git` (primary)
+- **origin**: `git@gitlab.com:babaoflamp/company_website.git` (backup)
+
+### Pushing Changes
+
+```bash
+# Push to both remotes
+git push github main  # Push to GitHub
+git push origin main  # Push to GitLab
+
+# Or push to both at once
+git push github main && git push origin main
+```
+
+### Setting Default Remote
+
+To make GitHub the default for `git push`:
+```bash
+git push -u github main
+```
 
 ## Deployment
 
