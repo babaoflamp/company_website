@@ -77,6 +77,10 @@ npm run dev
 - `npm run build` - Build for production
 - `npm start` - Start production server
 - `npm run lint` - Run ESLint
+- `npm test` - Run Playwright E2E tests
+- `npm run test:headed` - Run tests with browser UI
+- `npm run test:ui` - Run tests in interactive UI mode
+- `npm run test:report` - View test report
 
 ## Customization
 
@@ -112,6 +116,38 @@ Customize the 3D background in `components/3d/Scene.tsx`:
 - Optimized particle count for smooth 60fps rendering
 - Next.js automatic code splitting
 - Image optimization with next/image
+
+## Testing
+
+This project uses **Playwright** for E2E testing.
+
+### Running Tests
+
+```bash
+# Run all tests in headless mode
+npm test
+
+# Run tests with visible browser
+npm run test:headed
+
+# Run tests in interactive UI mode
+npm run test:ui
+
+# View test report
+npm run test:report
+```
+
+### Test Coverage
+
+- Homepage rendering and navigation
+- Section scrolling functionality
+- Mobile responsive menu
+- Contact form interaction
+- Project gallery display
+
+### Playwright MCP Setup
+
+For advanced browser automation with Claude, see [Playwright MCP Setup Guide](./.claude/playwright-mcp-setup.md).
 
 ## Deployment
 
